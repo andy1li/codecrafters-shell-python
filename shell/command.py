@@ -8,6 +8,8 @@ class Command(ABC):
     name: str
     args: str
 
+    def __call__(self): pass
+
     @staticmethod
     def parse(raw: str) -> 'Command':
         name, _, args = raw.partition(' ')
